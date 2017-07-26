@@ -3,5 +3,5 @@ def add_new_link(title, url, tags)
   fill_in 'title', with: title
   fill_in 'url', with: url
   fill_in 'tags', with: tags
-  click_button 'Submit'
+  click_button 'Create link'
 end
