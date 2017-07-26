@@ -15,6 +15,13 @@ class BookmarkManager < Sinatra::Base
     erb :'links/new'
   end
 
+  get '/tags/:name' do
+    @all_links = Link.all
+    @links = []
+    @all_links.each { |link| link.tags.each { |tag| @links << link if tag.name == params[:name] } }
+    erb(:'links/index')
+  end
+
   post '/links' do
     link = Link.create(url: params[:url], title: params[:title]) # 1. Create a link
     tag = Tag.first_or_create(name: params[:tags]) # 2. Create a tag for the link
