@@ -15,7 +15,8 @@ class Link
 end
 
 # Now let's set up a connection with a database
-DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
+#Heroku created: postgresql-pointy-97103 as database_url
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
 # Let's check that everything we wrote in our models was OK
 DataMapper.finalize
 # And let's build any new columns or tables we added
