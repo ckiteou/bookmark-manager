@@ -129,6 +129,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  rake
   rspec
   rubocop
   sinatra
@@ -137,4 +138,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.15.2
+   1.15.3
