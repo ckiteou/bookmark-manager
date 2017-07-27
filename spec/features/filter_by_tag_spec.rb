@@ -1,5 +1,4 @@
 require_relative 'web_helper'
-
 feature 'Filtering by tags' do
   scenario 'can see links tagged as bubbles' do
     add_new_link('Makers Academy', 'http://makersacademy.com', 'education')
